@@ -20,6 +20,8 @@ public static void main(String[] args )
     System.out.println(minValue(arr));
     System.out.print("The index of the minimun value is: ");
     System.out.println(minIndex(arr));
+    System.out.print("The average of the array is: ");
+    System.out.println(average(arr));
  }
 static int minValue (int[] arr)
 {
@@ -42,4 +44,13 @@ static int minIndex (int[] arr)
     }
   }
   return index;
-}}
+}
+static double average (int[] arr)
+{
+  int sum = 0;
+  for (int i = 0; i < arr.length; i++)
+    sum += arr[i];
+    return (double) sum / arr.length;
+}
+}
+
