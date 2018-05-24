@@ -1,3 +1,4 @@
+import java.util.Arrays;
 public class ProcessingArrays
 {
 public static void main(String[] args )
@@ -25,8 +26,8 @@ public static void main(String[] args )
     System.out.println(maxValue(arr));
     System.out.print("The average of the array is: ");
     System.out.println(average(arr));
-    System.out.print("The concatenate of the two array is:");
-    System.out.println(concatenate(arr, arr1));
+    System.out.println("The concatenate of the two array is:");
+    System.out.println(Arrays.toString(concatenate(arr, arr1)));
  }
 static int minValue (int[] arr)
 {
@@ -81,4 +82,3 @@ static int[] concatenate (int[] a, int[] b)
   return newArr;
 }
 }
-
