@@ -5,6 +5,8 @@ public static void main(String[] args )
  {
    int[] arr = {78, 498, 44, 56, 34, 45, 23};
    int[] arr1 = {5, 4, 2, 66, 89, 8, 34};
+   int[] arr2 = {38, 27, 43, 3, 9};
+   int b = 1;
    
    System.out.println("First way of printing an array");
    
@@ -28,7 +30,12 @@ public static void main(String[] args )
     System.out.println(average(arr));
     System.out.println("The concatenate of the two array is:");
     System.out.println(Arrays.toString(concatenate(arr, arr1)));
+    dummyIncrease(arr2, b);
+    System.out.println("The new value (main method) for arr2 is: " + Arrays.toString(arr2));
+    System.out.println("The new value (main method) of b is: " + b);
+    System.out.println("Notice the difference between local variable and global variable.");
  }
+
 static int minValue (int[] arr)
 {
   int min = arr[0];
@@ -38,6 +45,7 @@ static int minValue (int[] arr)
       min = elem;
   return min;
 }
+
 static int minIndex (int[] arr)
 {
   int index = 0, min = arr[0];
@@ -51,6 +59,7 @@ static int minIndex (int[] arr)
   }
   return index;
 }
+
 static int maxValue (int[] arr)
 {
   int max = arr[0];
@@ -62,6 +71,7 @@ static int maxValue (int[] arr)
   }
   return max;
 }
+
 static double average (int[] arr)
 {
   int sum = 0;
@@ -69,6 +79,7 @@ static double average (int[] arr)
     sum += arr[i];
     return (double) sum / arr.length;
 }
+
 static int[] concatenate (int[] a, int[] b)
 {
   int[] newArr = new int[a.length + b.length];
@@ -80,5 +91,16 @@ static int[] concatenate (int[] a, int[] b)
     newArr[i++] = elem;
   
   return newArr;
+}
+public static void dummyIncrease (int[] arr, int b)
+{
+  System.out.print("THe value of arr is: ");
+  System.out.println(Arrays.toString(arr));
+  System.out.print("The value of b is: ");
+  System.out.println(b);
+  arr[0] += 1;
+  b +=1;
+  System.out.println("The new value of arr is: " + Arrays.toString(arr));
+  System.out.println("The new value of b is: " + b);
 }
 }
