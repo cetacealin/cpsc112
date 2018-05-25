@@ -12,13 +12,15 @@ public static void main(String[] args )
    
    for (int i=0; i < arr.length; i++)
     {  
-    System.out.println(arr[i]);
+    System.out.print(arr[i] + " ");
     }
+    System.out.println();
     System.out.println("Second way");
     for (int elem : arr)
     {
-      System.out.println(elem);
+      System.out.print(elem + " ");
     }
+    System.out.println();
 
     System.out.print("The minimum value of the array is: ");
     System.out.println(minValue(arr));
@@ -34,6 +36,8 @@ public static void main(String[] args )
     System.out.println("The new value (main method) for arr2 is: " + Arrays.toString(arr2));
     System.out.println("The new value (main method) of b is: " + b);
     System.out.println("Notice the difference between local variable and global variable.");
+    System.out.println(arr.length/2);
+    System.out.println((double)arr.length/2);
  }
 
 static int minValue (int[] arr)
