@@ -9,6 +9,7 @@ public class Recursive
     int n = scan.nextInt();
     System.out.println("The factorial of " + n + " is: "+factorial(n));
     System.out.println(isPalindrome("noon"));
+    exchange(100, 200, 3);
   }
   public static long factorial (int n)
   {
@@ -28,4 +29,12 @@ public class Recursive
     }
     return false;
     }
+  public static void exchange (int a, int b, int n)
+  {
+     System.out.println("before: " + n + " a:" + a + " b:" + b);
+    if (n > 1)
+    exchange (b, a, n - 1);
+
+    System.out.println("after: " + n + " a:" + a + " b:" + b);
+  }
 }
