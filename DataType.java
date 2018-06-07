@@ -12,6 +12,5 @@ class DataType
     System.out.println("Days are " + number);
     System.out.println("Temperature is " + decimal);
     System.out.println("Answer is " + result); 
-      
   }
 }

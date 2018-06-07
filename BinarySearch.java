@@ -4,8 +4,8 @@ public class BinarySearch
   {
     int [] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
     int f = 0, l = 14, t = 8;
-    System.out.println(binarySearchRecursive(arr, f, l, t));
-    System.out.println(binarySearch(arr, t));
+    System.out.println("The target has been found at: " + binarySearchRecursive(arr, f, l, t));
+    System.out.println("The target has been found at: " + binarySearch(arr, t));
 
   }
   public static int binarySearchRecursive (int[] arr, int first, int last,int target)
