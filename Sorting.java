@@ -5,12 +5,17 @@ public class Sorting
   {
     int[] arr = {6, 3, 7, 2, 8, 99, 4};
     int[] arr2 = {99, 456, 23, 64, 835, 245};
+    int[] arr3 = {3, 5, 342, 12, 63, 3422, 899};
     System.out.println("The original array is: " + Arrays.toString(arr));
     selectionSort(arr);
     System.out.println("After using selectionSort method: " + Arrays.toString(arr));
     System.out.println("The original array is: " + Arrays.toString(arr2));
     insertionSort(arr2);
     System.out.println("After using insertionSort method: " + Arrays.toString(arr2));
+    System.out.println("The original array is: " + Arrays.toString(arr3));
+    bubbleSort(arr3);
+    System.out.println("After using bubbleSort method: " + Arrays.toString(arr3));
+
 
 
 
@@ -49,6 +54,17 @@ public class Sorting
         data[j] = data[j - 1];
       }
       data[j] = temp;
+    }
+  }
+  public static void bubbleSort (int[] data)
+  {
+    for ( int i = data.length - 1; i > 0; i--)
+    {
+      for (int j = 0; j <= i - 1; j++)
+      {
+        if (data[j] > data[j + 1])
+          swap(data, j, j + 1);
+      }
     }
   }
 }
