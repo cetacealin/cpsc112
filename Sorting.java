@@ -9,19 +9,24 @@ public class Sorting
     System.out.println("The original array is: " + Arrays.toString(arr));
     selectionSort(arr);
     System.out.println("After using selectionSort method: " + Arrays.toString(arr));
+    System.out.println();
     System.out.println("The original array is: " + Arrays.toString(arr2));
     insertionSort(arr2);
     System.out.println("After using insertionSort method: " + Arrays.toString(arr2));
+    System.out.println();
     System.out.println("The original array is: " + Arrays.toString(arr3));
     bubbleSort(arr3);
     System.out.println("After using bubbleSort method: " + Arrays.toString(arr3));
+    System.out.println();
+    int x = 1, y  = 1, z = 0, a = (x + y + z)/3;
+    System.out.println(a);
 
 
 
 
   }
   public static void selectionSort (int[] data)
-    //sortingin place (no extra array, use single memory locaion to swap)
+    //sorting in place (no extra array, use single memory locaion to swap)
   {
     for (int i = 0; i < data.length - 1; i++)
     {
