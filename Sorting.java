@@ -7,6 +7,7 @@ public class Sorting
     int[] arr2 = {99, 456, 23, 64, 835, 245};
     int[] arr3 = {5, 3, 42, 12, 63, 3422, 899};
     int[] arr4 = {24, 61, 6456, 33332, 43, 3, 2};
+    int[] arr5 = {45, 32, 7, 4, 9, 11, 645, 979};
     System.out.println("The original array is: " + Arrays.toString(arr));
     selectionSort(arr);
     System.out.println("After using selectionSort method: " + Arrays.toString(arr));
@@ -22,6 +23,11 @@ public class Sorting
     System.out.println("The array before mergeSort: " + Arrays.toString(arr4));
     mergeSort(arr4, 0, arr4.length - 1);
     System.out.println("After mergeSort method: " + Arrays.toString(arr4));
+    System.out.println();
+    System.out.println("The array before quickSort: " + Arrays.toString(arr5));
+    quickSort(arr5, 0, arr5.length - 1);
+    System.out.println("After quickSort method: " + Arrays.toString(arr5));
+    System.out.println();
   }
   public static void selectionSort (int[] data)
     //sorting in (same) place (no extra array, use single memory locaion to swap)
@@ -102,6 +108,34 @@ public class Sorting
       temp[k++] = data[j++];
     for (i = first; i <= last; i++)
       data[i] = temp[i - first];
+  }
+  public static void quickSort (int[] data, int first, int last)
+  {
+    if (first >= last)
+      return;
+    int pivot = partition (data, first, last);
+
+    quickSort(data, first, pivot - 1); //left
+    quickSort(data, pivot + 1, last); //right
+  }
+  public static int partition (int [] data, int first, int last)
+  {
+    int [] temp = new int[last - first + 1];
+    int pivot = data[first];
+    int i = 0, j = last - first, k;
+
+    for (k = first + 1; k <= last; k++)
+    {
+      if (data[k] <= pivot) 
+        temp[i++] = data[k];
+      else 
+        temp[j--] = data[k];
+    }
+    temp[i] = pivot;
+
+    for (k = first; k <= last; k++)
+      data[k] = temp[k - first];
+    return first + i;
   }
 }
 
